@@ -1,5 +1,5 @@
 {
-    "name": "bitbucket/client",
+    "name": "triasto/bitbucket-api-client",
     "description": "A Modern Bitbucket API 2.0 Client",
     "keywords": ["bitbucket", "bitbucket api", "Bitbucket API", "BitbucketAPI", "Bitbucket", "Bitbucket Client", "Bitbucket API Client", "Graham Campbell", "GrahamCampbell"],
     "license": "MIT",
