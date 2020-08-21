@@ -61,9 +61,9 @@ class ExceptionThrower implements Plugin
      * @param int         $status
      * @param string|null $message
      *
+     * @return void
      * @throws \Bitbucket\Exception\RuntimeException
      *
-     * @return void
      */
     private static function handleError(int $status, string $message = null)
     {
@@ -99,7 +99,7 @@ class ExceptionThrower implements Plugin
             if ($error = ResponseMediator::getContent($response)['error'] ?? null) {
                 if ($message = $error['message'] ?? null) {
                     if ($detail = $error['detail'] ?? null) {
-                        return sprintf('%s: %s', $message, strtok($detail, "\n"));
+                        return sprintf('%s: %s', $message, implode("\n", $detail));
                     } else {
                         return $message;
                     }
